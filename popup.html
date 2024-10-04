@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UI Inconsistency Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Use local copies of html2canvas and FileSaver.js -->
+    <script src="lib/html2canvas.min.js"></script>
+    <script src="lib/FileSaver.min.js"></script>
+    <script src="lib/dom-to-image-more.js"></script>
+    <script src="lib/html-to-image.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="header-actions">
+          <div class="logo-container">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ea1a5a6f1f21360b11a42f5e51fa3eb32c42dffd6a1d0882dee017160145252?placeholderIfAbsent=true&apiKey=1118207f10d745748bbfc868197ded1e" class="logo-image" alt="Company logo" />
+            <h1 class="company-name">componly</h1>
+          </div>
+          <button class="action-button" aria-label="Menu">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/52b3e6127c197e8c8dfadfaeb3964c33e9846d5191e9d58525070513a8bf3609?placeholderIfAbsent=true&apiKey=1118207f10d745748bbfc868197ded1e" class="action-icon" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="componly-ai-section">
+      <h2 class="componly-ai-title">Componly AI</h2>
+      <div class="componly-ai-description">
+          <p class="bold-text">Scan any website and spot</p>
+          <p class="bold-text">automatically all UI's inconsistencies</p>
+      </div>
+    </section>
+      <section class="misc-divider">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e96398574479dddeb4421fbfe3702f3067ac62edc46fe37fe64846192cefc77?placeholderIfAbsent=true&apiKey=1118207f10d745748bbfc868197ded1e" class="divider-image" alt="" />
+        </section>
+        <section class="url-input-container">
+          <h2 class="url-input-title">
+              <span class="url-input-title-text">Type your URL here:</span>
+          </h2>
+          <form>
+              <label for="urlInput" class="visually-hidden">Enter the website's URL you want to scan</label>
+              <input type="url" id="url-input" class="url-input-field" placeholder="https://website.com" aria-label="Enter the website's URL you want to scan">
+          </form>
+          <p class="url-input-description">Enter here the website's url you want to scan</p>
+      </section>
+      <section class="misc-divider">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e96398574479dddeb4421fbfe3702f3067ac62edc46fe37fe64846192cefc77?placeholderIfAbsent=true&apiKey=1118207f10d745748bbfc868197ded1e" class="divider-image" alt="" />
+      </section>
+      <p class="device-scan-title">Select device to scan</p>
+      <section class="device-scan-container">
+          
+            
+          
+          <nav class="device-scan-tabs" role="tablist">
+            <button class="tab-button tab-button-active" role="tab" aria-selected="true" tabindex="0" id="desktop-version">Web</button>
+            <button class="tab-button tab-button-inactive" role="tab" aria-selected="false" tabindex="0" id="mobile-version">Mobile</button>
+          </nav>
+          <section class="misc-divider">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e96398574479dddeb4421fbfe3702f3067ac62edc46fe37fe64846192cefc77?placeholderIfAbsent=true&apiKey=1118207f10d745748bbfc868197ded1e" class="divider-image" alt="" />
+          </section>
+          <button class="scan-button" id="scan-button" tabindex="0">Scan this website</button>
+        </section>
+        <section id="result-section"></section>
+    <script src="content.js"></script>
+  </body>
+</html>

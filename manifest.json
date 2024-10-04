@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "UI Inconsistency Checker",
+    "version": "1.0",
+    "description": "Scans for UI inconsistencies based on class names.",
+    "permissions": ["activeTab", "scripting", "tabs", "storage","https://*/*","http://*/*"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "lib/FileSaver.min.js",
+        "lib/html2canvas.min.js",
+        "lib/dom-to-image-more.js",
+        "lib/html-to-image.js",
+        "lib/html-to-image.min.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+    "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "js": ["lib/dom-to-image-more.js","lib/html-to-image.js", "lib/html-to-image.min.js","content.js"]
+    }
+]
+}
